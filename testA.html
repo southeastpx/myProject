@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*a:link{
+            color:red;
+        }
+        a:visited{
+            color:yellow;
+        }*/
+        ul li{
+            display: inline-block;
+            list-style: none;
+            width:100px;
+            height:40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+        }
+        ul li:hover{
+            background-color: aqua;
+        }
+        ul li a{
+            text-decoration: none;
+        }
+
+        ul li a:hover{
+            color:white;
+        }
+
+        ul li a:active{
+            color:orangered;
+        }
+
+        div:not(.d1){
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">交易手续费</a></li>
+        <li><a href="#">交收手续费</a></li>
+        <li><a href="#">交易商限仓</a></li>
+        <li><a href="#">交易保证金</a></li>
+    </ul>
+
+    <div class="d1">块元素</div>
+    <div class="d1 d3">块元素</div>
+    <div class="d2 d1">块元素</div>
+    <div class="d1">块元素</div>
+    <div class="d2">块元素</div>
+
+</body>
+</html>

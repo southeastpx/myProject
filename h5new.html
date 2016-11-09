@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        header{height:100px;background-color: yellow}
+        nav{height:50px;background-color: aqua}
+        .left{height:600px;background-color: antiquewhite;display:inline-block;width:30%;}
+        .right{height:600px;background-color:forestgreen;display:inline-block;width:69%;}
+        footer{height:200px;background-color: blueviolet}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>页面的头部</h1>
+        <ruby>
+            哈<rt>ha</rt>
+            <rp>还好</rp>
+        </ruby>
+        <details>
+            <summary>点击查看更多</summary>
+            <h1>打开的内容</h1>
+            <img src="img/mypic.png" alt=""/>
+        </details>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#"><mark>百度</mark></a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="left">
+            10:00点开始<progress value="0.5" max="2"></progress>12:00点结束
+            <video src="video/myvideo.mp4" controls="controls">
+                当前浏览器不支持播放
+            </video>
+            <input type="text" name="carName" list="cars"/>
+            <datalist id="cars">
+                <option value="宝马"></option>
+                <option value="奥迪"></option>
+                <option value="奔驰"></option>
+            </datalist>
+            <canvas id="myCanvas"></canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle("#FF0000");
+                ctx.fillRect(0,0,80,100);
+            </script>
+        </div>
+        <div class="right"></div>
+    </div>
+    <footer>
+        <address>&copy;上海期货信息技术有限公司</address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        input::-moz-placeholder{
+            color:red;
+        }
+        input::-webkit-input-placeholder{
+            color:darkgoldenrod;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate(){
+            var txtName = document.getElementById("txt_name");
+            var button = document.getElementById("btnValidate");
+            var form = document.getElementById("testForm2");
+            if(txtName.value.trim()==""){
+                if(txtName.labels.length==1){
+                    var label = document.createElement("label");
+                    label.setAttribute("for","txt_name");
+                    form.insertBefore(label,button);
+                    txtName.labels[1].innerHTML="请输入姓名";
+                    txtName.labels[1].setAttribute("style","font-size:9px;color:red");
+                }
+            }else if(txtName.labels.length>1){
+                form.removeChild(txtName.labels[1]);
+            }
+
+        }
+
+        function setDefaultValue(){
+            var label = document.getElementById("label1");
+            var textBox = label.control;
+            textBox.value = "215300";
+        }
+
+        function alertSelectDeriction(){
+            var textBox = document.forms[0].text;
+
+            alert(textBox);
+        }
+
+        var chkFruit = document.getElementById("fruit");
+        chkFruit.indeterminate = true;
+    </script>
+</head>
+<body>
+    <form id="testForm" action="index.jsp" method="method">
+        用户名:<input type="text" name="username" autofocus="autofocus" required="required" pattern="[0-9][A-Z]{3}"/>
+        <input type="submit" name="s1" value="get方式提交" formaction="ok1.html" formmethod="get" formtarget="_self"/>
+        <input type="submit" name="s2" value="post方式提交" formaction="ok2.html" formmethod="post" formtarget="_blank"/>
+        <input type="submit" value="提交"/>
+    </form>
+    密码:<input type="password" name="password" form="testForm"/>
+    <br/>
+    <br/>
+    <br/>
+    <form id="testForm2" action="ok.html">
+        <label id="label" for="txt_name">姓名:</label><input type="text" name="username" id="txt_name"/>
+        <input type="button" id="btnValidate" value="验证" onclick="validate()"/>
+    </form>
+
+    <br/>
+    <br/>
+    <br/>
+    <form id="testForm3" action="ok.html">
+        <label id="label1">
+            邮编:<input type="text" name="zipcode" maxlength="6" placeholder="请输入邮编" list="zipcodelist" autocomplete="on"/><small>请输入六位数字！</small>
+            <datalist id="zipcodelist" style="display: none">
+                <option value="230012">230012</option>
+                <option value="245643">245643</option>
+                <option value="453454">453454</option>
+                <option value="123432">123432</option>
+            </datalist>
+        </label>
+        <input type="button" value="设置默认值" onclick="setDefaultValue()"/>
+    </form>
+
+    <br/>
+    <br/>
+    <br/>
+    <form id="testForm4" action="ok.html">
+        用户名:<input type="text" name="username"/>
+        <input type="button" value="点击" onclick="alertSelectDeriction()"/>
+    </form>
+
+    <br/>
+    <br/>
+    <br/>
+    <input type="checkbox" id="fruit" indeterminate/>测试indeterminate属性
+</body>
+</html>

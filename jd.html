@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        div{
+            width:855px;
+            height:535px;
+            background-image:url("img/bg.png");
+            position:relative;
+        }
+        div:hover::before{
+            content:"<";
+            width:40px;
+            height:75px;
+            background-color: bisque;
+            display:block;
+            position:absolute;
+            left:0px;
+            top:200px;
+            text-align: center;
+            line-height: 77px;
+            font-size:40px;
+            color:#fff;
+        }
+        div:hover::after{
+            content:">";
+            width:40px;
+            height:75px;
+            background-color: bisque;
+            display:block;
+            position:absolute;
+            right:0px;
+            top:200px;
+            text-align: center;
+            line-height: 77px;
+            font-size:40px;
+            color:#fff;
+        }
+        ul{
+            position: absolute;
+            top:486px;
+            left:404px;
+        }
+        ul li{
+            list-style: none;
+            float:left;
+        }
+        ul li a{
+            display:inline-block;
+            background-color: brown;
+            width:20px;
+            height:20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius:10px;
+        }
+        ul li a:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+</body>
+</html>

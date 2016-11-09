@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li:nth-child(2){
+            color:red;
+        }
+        ul::before {
+            content:"这是ul的before伪元素";
+            color:red;
+        }
+
+        ul::after{
+            content:"这是ul的after伪元素";
+            color:yellow;
+        }
+
+        input:checked+span{
+            background-color: red;
+        }
+
+        input:checked+span::after{
+            content:"选中了"
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>橘子</li>
+        <li>甘蔗</li>
+        <li>柚子</li>
+    </ul>
+
+    <fieldset>
+        <legend>选择你喜欢的明星</legend>
+        <label><input type="radio" name="favorman" checked="checked"/><span>刘德华</span></label><br/>
+        <label><input type="radio" name="favorman"/><span>古天乐</span></label><br/>
+        <label><input type="radio" name="favorman"/><span>张学友</span></label><br/>
+        <label><input type="radio" name="favorman"/><span>郭富城</span></label>
+    </fieldset>
+</body>
+</html>
