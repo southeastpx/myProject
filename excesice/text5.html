@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试output元素</title>
+    <script type="text/javascript">
+        function value_change(){
+            var inputValue = document.getElementById("range").value;
+            document.getElementById("output").value = inputValue;
+        }
+
+        function detail_ontoggle(){
+            var p = document.getElementById("p");
+            if(detail.open){
+                p.style.visibility = "visible";
+            }else{
+                p.style.visibility = "hidden";
+            }
+        }
+
+        function button_click(){
+            var progressBar = document.getElementById("p");
+            alert(progressBar.getElementsByTagName("span")[0].textContent);
+            for(var i=0;i<=100;i++){
+                updateProgress(i);
+            }
+        }
+
+        function updateProgress(newValue){
+            alert(111);
+            var progressBar = document.getElementById("p");
+            progressBar.value = newValue;
+            progressBar.getElementsByTagName("span")[0].innerHTML = newValue;
+        }
+    </script>
+</head>
+<body>
+    <form action="ok.html" id="form1">
+        <input type="range" name="range" id="range" min="0" max="80" step="5" value="10" onchange="value_change();"/>
+        <output id="output"></output>
+    </form>
+    <br/><br/>
+    <form id="form2" action="ok1.html" novalidate="novalidate">
+        <input type="text" name="age" required="required" pattern="[0-9]*"/>
+        <input type="submit" value="提交"/>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <figure>
+        <figcaption>雪人</figcaption>
+        <img src="../img/snowman.png"/>
+    </figure>
+    <br/>
+    <br/>
+    <br/>
+    <details id="detail" ontoggle="detail_ontoggle(this)">
+        <summary>精武风云</summary>
+        <p id="p" style="visibility: hidden">国家主席访问了北京国家博物馆.....</p>
+    </details>
+    <br/>
+    <br/>
+    <br/>
+    <p>完成百分比:<progress id="p" max="100" value="0"><span>10</span>%</progress></p>
+    <input type="button" onclick="button_click();" value="请点击"/>
+</body>
+</html>
