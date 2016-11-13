@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .box{
+            height:50px;
+            width:100%;
+            display: flex;
+        }
+        .item1{
+            flex-grow: 1;
+            background-color: aqua;
+        }
+        .item2{
+            flex-grow: 2;
+            background-color: red;
+        }
+        .item3{
+            flex-grow: 3;
+            background-color: yellow;
+        }
+        /*ul li{*/
+            /*list-style: none;*/
+            /*float:left;*/
+            /*width:120px;*/
+            /*background-color: aqua;*/
+            /*margin-right: 18px;*/
+        /*}*/
+        /*使用flex布局*/
+        ul{
+            display:flex;
+        }
+        ul li{
+            flex-grow: 1;
+            list-style: none;
+            width:120px;
+            margin-right: 18px;
+            background:darkturquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>
