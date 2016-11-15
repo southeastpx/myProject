@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>meter元素测试</title>
+</head>
+<body>
+    <p>磁盘使用量:<meter value="40" min="0" max="160"></meter>GB</p>
+    <p>你的得分是:<meter value="91" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+    <meter>80%</meter>
+    <meter>3/4</meter>
+    <p>我喜欢的电影是有甄子丹主演的<cite>精武风云</cite></p>
+    <br/>
+    <input type="button" value="打开对话框" onclick="document.getElementById('mydialog').showModal();"/>
+    <dialog id="mydialog" open="open">
+        <main>
+            <form>
+                <label for="username">用户名:</label><input type="text" name="username" id="username"/><br/>
+                <label for="password">密码:</label><input type="password" name="password" id="password"/><br/>
+                <input type="button" value="登录"/>
+                <input type="button" value="关闭" onclick="document.getElementById('mydialog').close();"/>
+            </form>
+        </main>
+    </dialog>
+</body>
+</html>
